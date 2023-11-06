@@ -1,6 +1,6 @@
 <script>
-import HeaderMenu from  './HeaderMenu.vue'
-import Footer from  './Footer.vue'
+import HeaderMenu from  './SideMenu.vue'
+import Footer from  './Header.vue'
 import axios from "axios";
 export default {
 
@@ -141,11 +141,11 @@ methods: {
 
     if(this.add_buttons[index]==="Add to list"){
       this.add_buttons[index]="Added"
-      this.buttons_style[index]="btn btn-primary waves-effect waves-light";
+      this.buttons_style[index]="btn btn-primary";
       this.selected_frameworks.push(this.frameworks[index].reference)
     }else{
       this.add_buttons[index]="Add to list";
-      this.buttons_style[index]="btn btn-outline-primary waves-effect waves-light";
+      this.buttons_style[index]="btn btn-outline-primary";
       this.remove_from_array(this.selected_frameworks,this.frameworks[index].reference);
     }
 
