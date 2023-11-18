@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Octopus | Scope Overview</title>
+        <title>Octopus | Control Details 3</title>
 
         <!-- bootstrap css -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,28 +14,6 @@
     </head>
 
     <body>
-        <!-- Cinfirm scope modal -->
-        <div class="modal fade" id="confirmModal" aria-labelledby="confirmModal" aria-hidden="true" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="card confirm-scope-card">
-                        <div class="d-flex align-items-start mb-2">
-                            <h2 class="modal-title">Confirm Scope</h2>
-                            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body px-0">
-                            <h6>Are you sure you want to confirm Control Scope?</h6>
-                            <h6>You can redefine later at any point in the future.</h6>
-                        </div>
-                        <footer class="modal-btn-wrapper d-flex justify-content-end">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">Confirm Scope</button>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //End Cinfirm scope modal -->
         <div class="d-flex w-100">
             <aside id="sidebar" class="sidebar collapse d-lg-block">
                 <div class="main-logo">
@@ -53,7 +31,7 @@
                                 Dashboard
                             </a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a class="d-flex align-items-center" href="select-frameworks.html">
                                 <div class="nav-icon d-flex align-items-center justify-content-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
@@ -63,7 +41,7 @@
                                 Control Scope
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a class="d-flex align-items-center" href="control-details-main.html">
                                 <div class="nav-icon d-flex align-items-center justify-content-center">
                                     <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -100,7 +78,7 @@
                                         <path fill="#fff" d="M11.813 11.117a.562.562 0 0 1-.563.562h-4.5a.563.563 0 0 1 0-1.125h4.5a.562.562 0 0 1 .563.563Zm-.563-2.813h-4.5a.563.563 0 1 0 0 1.125h4.5a.562.562 0 1 0 0-1.125Zm3.938-4.5v11.813a1.125 1.125 0 0 1-1.126 1.124H3.938a1.125 1.125 0 0 1-1.126-1.124V3.803a1.125 1.125 0 0 1 1.126-1.125h2.549a3.37 3.37 0 0 1 5.026 0h2.55a1.125 1.125 0 0 1 1.124 1.125ZM6.75 4.929h4.5a2.25 2.25 0 0 0-4.5 0Zm7.313-1.125h-1.881c.128.361.193.742.193 1.125v.562a.562.562 0 0 1-.563.563H6.189a.563.563 0 0 1-.563-.563V4.93c0-.383.065-.764.193-1.125h-1.88v11.813h10.124V3.803Z" />
                                     </svg>
                                 </div>
-                                Manager
+                                Evidence Manager
                             </a>
                         </li>
                         <li>
@@ -224,139 +202,285 @@
                 </header>
                 <div class="content-container">
                     <div class="content">
-                        <section class="card step-wizard">
-                            <ul class="step-wizard-list d-flex align-items-center">
-                                <li class="step-wizard-item">
-                                    <span class="progress-count">1</span>
-                                    <span class="progress-label">Select Frameworks</span>
-                                </li>
-                                <li class="step-wizard-item">
-                                    <span class="progress-count">2</span>
-                                    <span class="progress-label">Refine Controls</span>
-                                </li>
-                                <li class="step-wizard-item current-item">
-                                    <span class="progress-count">3</span>
-                                    <span class="progress-label">Scope Overview</span>
-                                </li>
-                            </ul>
+                        <section class="control-summary card p-0">
+                            <div class="card-header bg-white">
+                                <h5>Control Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row control-summary-row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 g-3">
+                                    <div class="col">
+                                        <div class="card-item card d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <h1>560</h1>
+                                                <h6>Active Controls</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-item card card d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <div class="progress progress-circle blue-secondary d-flex justify-content-center align-items-center" data-value='80'>
+                                                    <span class="progress-left">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <span class="progress-right">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <div class="progress-value d-flex justify-content-center align-items-center">371</div>
+                                                </div>
+                                                <h6>Deficient</h6>
+                                                <a href="#">See Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-item card card d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <div class="progress progress-circle blue-primary d-flex justify-content-center align-items-center" data-value='34'>
+                                                    <span class="progress-left">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <span class="progress-right">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <div class="progress-value d-flex justify-content-center align-items-center">34</div>
+                                                </div>
+                                                <h6>In Place</h6>
+                                                <a href="#">See Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-item card card d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <div class="progress progress-circle red d-flex justify-content-center align-items-center" data-value="40">
+                                                    <span class="progress-left">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <span class="progress-right">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <div class="progress-value d-flex justify-content-center align-items-center">34</div>
+                                                </div>
+                                                <h6>Ready for Review</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-item card card d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <div class="progress progress-circle green d-flex justify-content-center align-items-center" data-value="70">
+                                                    <span class="progress-left">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <span class="progress-right">
+                                                        <span class="progress-bar"></span>
+                                                    </span>
+                                                    <div class="progress-value d-flex justify-content-center align-items-center">34</div>
+                                                </div>
+                                                <h6>Monitored</h6>
+                                                <a href="#">See Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
-                        <section class="table-area card p-0">
-                            <table class="table table-hover">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th scope="col">CONTROL CODE</th>
-                                        <th scope="col">CONTROLS</th>
-                                        <th scope="col">FRAMEWORKS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Security Portfolio Management</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>GOV-05</td>
-                                        <td>Cybersecurity & Privacy Governance</td>
-                                        <td>BSI Standard 200-1 : 8.2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAT-01</td>
-                                        <td>Artificial & Autonomous Technologies</td>
-                                        <td>BSI Standard 200-1 : 8.3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAT-01.1</td>
-                                        <td>Publishing Cybersecurity & Privacy Documentation</td>
-                                        <td>BSI Standard 200-1 : 8.4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAT-01.2</td>
-                                        <td>Authoritative Chain of Command</td>
-                                        <td>BSI Standard 200-1 : 8.5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AST-01.2</td>
-                                        <td>Asset Management</td>
-                                        <td>BSI Standard 200-1 : 8.6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Security Portfolio Management</td>
-                                        <td>BSI Standard 200-1 : 8.7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.8</td>
-                                    </tr>
-                                    <tr>
-                                        <td>DSM-O1.3</td>
-                                        <td>Digital Security Governance Program</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Security Portfolio Management</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PRM-01</td>
-                                        <td>Business Continuity & Disaster Recovery</td>
-                                        <td>BSI Standard 200-1 : 8.1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                        <section class="d-flex flex-wrap flex-sm-nowrap align-items-center">
-                            <div class="framework-selected">3 Frameworks Selected</div>
-                            <a href="select-frameworks-2.html" class="btn btn-outline-primary bg-white ms-sm-auto mt-2 mt-sm-0 d-flex align-items-center">
-                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none">
-                                    <path stroke="#3060F1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.5 1 2.207 5.293c-.333.333-.5.5-.5.707 0 .207.167.374.5.707L6.5 11" />
-                                </svg>
-                                <span>Back to Refine Controls</span>
-                            </a>
-
-                            <button data-bs-toggle="modal" data-bs-target="#confirmModal" class="btn btn-primary d-flex align-items-center ms-sm-3 mt-2 mt-sm-0">
-                                <span>Confirm Scope</span>
-                                <svg class="arrow-right ms-1" xmlns="http://www.w3.org/2000/svg" width="10" height="12" fill="none">
-                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.5 11 4.293-4.293c.333-.333.5-.5.5-.707 0-.207-.167-.374-.5-.707L1.5 1" />
-                                </svg>
-                            </button>
+                        <section class="card p-0 overflow-hidden">
+                            <div class="scrollable-area">
+                                <table class="table table-hover scrollable searchable-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="bg-light">
+                                                <div>
+                                                    <div class="title-row">NAME</div>
+                                                    <div class="search-field-row position-relative">
+                                                        <input class="form-control" type="text" placeholder="Search...">
+                                                        <button type="button" class="btn p-0 btn-transparent">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                                <path d="M12.5 8a.5.5 0 0 1-.5.5H4a.5.5 0 1 1 0-1h8a.5.5 0 0 1 .5.5Zm2-3.5h-13a.5.5 0 1 0 0 1h13a.5.5 0 0 0 0-1Zm-5 6h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1Z" fill="#525E75" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="bg-light">
+                                                <div>
+                                                    <div class="title-row">ID</div>
+                                                    <div class="search-field-row position-relative">
+                                                        <input class="form-control" type="text" placeholder="Search...">
+                                                        <button type="button" class="btn p-0 btn-transparent">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                                <path d="M12.5 8a.5.5 0 0 1-.5.5H4a.5.5 0 1 1 0-1h8a.5.5 0 0 1 .5.5Zm2-3.5h-13a.5.5 0 1 0 0 1h13a.5.5 0 0 0 0-1Zm-5 6h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1Z" fill="#525E75" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="bg-light">
+                                                <div>
+                                                    <div class="title-row">DESCRIPTION</div>
+                                                    <div class="search-field-row position-relative">
+                                                        <input class="form-control" type="text" placeholder="Search...">
+                                                        <button type="button" class="btn p-0 btn-transparent">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                                <path d="M12.5 8a.5.5 0 0 1-.5.5H4a.5.5 0 1 1 0-1h8a.5.5 0 0 1 .5.5Zm2-3.5h-13a.5.5 0 1 0 0 1h13a.5.5 0 0 0 0-1Zm-5 6h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1Z" fill="#525E75" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="bg-light">
+                                                <div>
+                                                    <div class="title-row">DOMAINS</div>
+                                                    <div class="search-field-row position-relative">
+                                                        <input class="form-control" type="text" placeholder="Search...">
+                                                        <button type="button" class="btn p-0 btn-transparent">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                                <path d="M12.5 8a.5.5 0 0 1-.5.5H4a.5.5 0 1 1 0-1h8a.5.5 0 0 1 .5.5Zm2-3.5h-13a.5.5 0 1 0 0 1h13a.5.5 0 0 0 0-1Zm-5 6h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1Z" fill="#525E75" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="bg-light">
+                                                <div>
+                                                    <div class="title-row">REGULATIONS</div>
+                                                    <div class="search-field-row position-relative">
+                                                        <input class="form-control" type="text" placeholder="Search...">
+                                                        <button type="button" class="btn p-0 btn-transparent">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                                <path d="M12.5 8a.5.5 0 0 1-.5.5H4a.5.5 0 1 1 0-1h8a.5.5 0 0 1 .5.5Zm2-3.5h-13a.5.5 0 1 0 0 1h13a.5.5 0 0 0 0-1Zm-5 6h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1Z" fill="#525E75" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="height: 313px;">
+                                        <tr>
+                                            <td class="table-details"><a href="control-details-main-2.html">Publishing Security & Privacy Do...</a></td>
+                                            <td class="table-details">GOV-02</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Security & Privacy Governance</td>
+                                            <td class="table-details">NIST 800-53 (5) ISO 2700...</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Asset Governance</td>
+                                            <td class="table-details">AST-01</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 800-53 (5), ISO 2700...</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Asset Inventories</td>
+                                            <td class="table-details">AST-01</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 800-53 (5), ISO 2700...</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Software Licensing Restriction</td>
+                                            <td class="table-details">AST-02.7</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">NIST 800-53 (5), ISO 270...</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Assigning Ownership of Assets</td>
+                                            <td class="table-details">AST-03</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 27002 (2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Publishing Security & Privacy Do...</td>
+                                            <td class="table-details">AST-05</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 27002 (2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Unattednde End-User Equip...</td>
+                                            <td class="table-details">AST-06</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 27002 (2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Kiosks & Point of Sale (Pos) Devi...</td>
+                                            <td class="table-details">AST-07</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 27002 (2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Temper Deection</td>
+                                            <td class="table-details">AST-08</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">NIST 800-53 (5) ISO 2700...</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Secure Disposal, Destruction or...</td>
+                                            <td class="table-details">AST-09</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 27002 (2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Return of Assets</td>
+                                            <td class="table-details">AST-10</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">ISO 27002 (2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-details">Removal of Assets</td>
+                                            <td class="table-details">AST-10</td>
+                                            <td class="table-details">Mechanism exist to establish...</td>
+                                            <td class="table-details">Asset Management</td>
+                                            <td class="table-details">NIST 800-53 (5) ISO 2700...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
                     </div>
                 </div>
             </main>
         </div>
+
+
         <!-- Javascript -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $(".progress").each(function () {
+                    var value = $(this).attr('data-value');
+                    var left = $(this).find('.progress-left .progress-bar');
+                    var right = $(this).find('.progress-right .progress-bar');
+                    // var valueEl = $(this).find('.progress-value d-flex justify-content-center align-items-center');
+
+                    if (value > 0) {
+                        // valueEl.text(value);
+                        if (value <= 50) {
+                            right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+                        } else {
+                            right.css('transform', 'rotate(180deg)')
+                            left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+                        }
+                    }
+                })
+
+                function percentageToDegrees(percentage) {
+                    return percentage / 100 * 360
+                }
+            });
+        </script>
     </body>
 
 </html>

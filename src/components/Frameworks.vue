@@ -3,6 +3,7 @@ import SideMenu from  './SideMenu.vue'
 import Header from  './Header.vue'
 import Stepbar from  './Stepbar.vue'
 import axios from "axios";
+
 export default {
 
 name: 'Frameworks',
@@ -11,8 +12,10 @@ name: 'Frameworks',
  components: {
     SideMenu,
     Header,
-    Stepbar
+    Stepbar,
+ 
   },
+
 data () {
 
     return{
@@ -30,7 +33,11 @@ data () {
       show_framework:true,
       show_domains:false,
       show_controls:false,
-      current_step:['step-wizard-item current-item','step-wizard-item','step-wizard-item']
+      frameworkSearchKey : '',
+      library_created: false,
+      show_redirect : false,
+      current_step:['step-wizard-item current-item','step-wizard-item','step-wizard-item'],
+      scope_to_submit:{req_owner:"Sed",controls:[],company_id:"SSNIT_GHANA"}
 
     }
 
@@ -41,12 +48,11 @@ methods: {
   get_frameworks() {
       
       //this.loading = true;
-
       var config = {
           method: 'GET',
           url: this.api_url+'/api/v1/frameworks',
            headers: { 
-         // 'user_token': localStorage.getItem('token'),
+         
         },
           };
           
@@ -61,10 +67,9 @@ methods: {
       
       }, error => {
          
-          console.log(error);
+             console.log(error);
          
       });
-  
   
   },
 
@@ -79,12 +84,12 @@ methods: {
     let frames = [];
    
     for (let i = 0; i < this.selected_frameworks.length; i++) {
-      //text += this.selected_frameworks[i] + "<br>";
-      console.log(this.selected_frameworks[i]);
-      console.log(this.selected_frameworks[i].replace(/(\\r)|(\\n)/g,"\n"));
+  
       frames.push(this.selected_frameworks[i].replace(/(\\r)|(\\n)/g,"\n"))
      
     }
+
+   
 
     console.log(this.selected_frameworks);
     console.log(frames);
@@ -113,6 +118,8 @@ methods: {
           
           console.log(result); 
           this.domains=result.data;
+          
+          this.CheckAllControlsByDefault();
        
       }, error => {
          
@@ -145,6 +152,84 @@ methods: {
 
   },
 
+
+//   confirm_scope(){
+
+//     this.scope_to_submit.controls = [];
+//     for (let i = 0; i < this.checkedControls.length; i++) {
+       
+//         this.scope_to_submit.controls.push(this.checkedControls[i].Uuid );
+        
+//     }
+
+//     console.log(this.scope_to_submit.controls);
+
+//         var data = JSON.stringify({
+//     "req_owner": "the owner",
+//     "controls": [
+//         "85257ab3-b5c4-47da-a071-82c202b55e38",
+//         "82213f6c-3421-4925-9000-cec4484c779d",
+//         "1a201bcc-3aa6-4e41-a4d5-cca7adc8e797",
+//         "590a58ad-b8dd-42e0-bbe6-e86f448198d9"
+//     ],
+//     "company_id": "SSNIT_GHANA"
+// });
+//         var config = {
+//             method: 'POST',
+//             url: this.api_url+'/api/v1/ConfirmScope',
+//             headers: { 
+       
+//         },
+//         data : data
+//             };
+//         axios(config).then(result => {
+            
+//             console.log(result); 
+               
+//         }, error => {  
+//             console.log(error);  
+//         });
+
+//   },
+
+confirm_scope(){
+
+        this.scope_to_submit.controls = [];
+        for (let i = 0; i < this.checkedControls.length; i++) {
+            this.scope_to_submit.controls.push(this.checkedControls[i].Uuid );
+        }
+        var data = JSON.stringify(this.scope_to_submit);
+
+        var config = {
+        method: 'post',
+        url: this.api_url+'/api/v1/ConfirmScope',
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        data : data
+        };
+
+        axios(config)
+        .then(function (response) {
+        console.log(response.data);
+        
+
+        //window.location.href = "/library";
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+
+     
+        this.current_step[0] = 'step-wizard-item';
+        this.current_step[1] = 'step-wizard-item';
+        this.current_step[2] = 'step-wizard-item';
+        this.library_created = true;
+        this.show_redirect = true;
+        this.show_controls = false;
+
+},
+
   back_to_refine_controls(){
        this.show_framework = false;
        this.show_domains = true;
@@ -167,6 +252,7 @@ methods: {
         this.add_buttons[index]="Add to list";
         this.buttons_style[index]="btn btn-outline-primary";
         this.remove_from_array(this.selected_frameworks,this.frameworks[index].reference);
+      
         }
 
   },
@@ -206,6 +292,7 @@ methods: {
                         for (let k = 0; k < this.domains[j].Controls.length; k++){
                             this.removeSelectedControl(this.domains[j].Controls[k]);
                             this.checkedControls.push(this.domains[j].Controls[k]);
+                               
                         }
                 }
             } 
@@ -223,8 +310,26 @@ methods: {
             } 
     }
 
-      
+  
 
+  },
+
+
+  CheckAllControlsByDefault(){
+
+    this.checkedDomains=[]; this.checkedControls=[]; 
+
+    for (let i = 0; i < this.domains.length; i++){
+                
+                        this.checkedDomains.push(this.domains[i].SCFIdentifier);
+                        for (let j = 0; j < this.domains[i].Controls.length; j++){
+                         
+                            this.checkedControls.push(this.domains[i].Controls[j]);
+                            
+                        }
+                
+    } 
+        
   },
 
 
@@ -233,11 +338,37 @@ methods: {
         for (let i = 0; i < this.checkedControls.length; i++) {
 
             if (this.checkedControls[i].Uuid === control.Uuid) {
-            let spliced = this.checkedControls.splice(i, 1);
-            console.log("Removed element: " + spliced);
+               
+                 this.checkedControls.splice(i, 1);
           
-             }
+            }
         }
+  },
+
+
+  searchFramework(){
+
+    console.log("===================printing frameworkSearchKey value======================");
+    console.log(this.frameworkSearchKey);
+    //console.log(str.toLowerCase().includes(substr));
+  },
+
+
+  go_to_library(){
+
+    this.$router.push('ControlLibrary')
+  },
+
+
+
+
+  concatStrings(concat_arr){
+
+    let final_string = '';
+    for(let i=0;i<concat_arr.length;i++){
+       final_string = final_string +' ' +concat_arr[i] +' | ';
+    }
+    return final_string;
   }
 
 
@@ -246,7 +377,8 @@ methods: {
 },
 
 created(){
-
+  this.library_created = false;
+  this.show_redirect = false;
   this.get_frameworks()
 },
 mounted(){
@@ -280,6 +412,10 @@ mounted(){
                         
                         <Stepbar :current_step="current_step"></Stepbar>  
 
+                        <div v-if="library_created"  class="alert alert-success" role="alert">
+                              Controls successfully added to your library!
+                        </div>
+
                         <section  v-if="show_framework" class="section-title d-sm-flex justify-content-between align-items-center">
                             <h2 class="fw-semibold mb-2 mb-sm-0">Choose Frameworks</h2>
                             <form class="search-bar card p-2 p-lg-3 flex-row flex-nowrap align-items-center">
@@ -288,7 +424,7 @@ mounted(){
                                         <path stroke="#8B94A5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8.25 14.25a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM15.75 15.75l-3.262-3.262" />
                                     </svg>
                                 </button>
-                                <input type="text" class="form-control border-0" id="search" placeholder="Search for Frameworks">
+                                <input type="text" class="form-control border-0" id="search" placeholder="Search for Frameworks" @change="searchFramework()" v-model="frameworkSearchKey">
                             </form>
                         </section>
 
@@ -373,7 +509,7 @@ mounted(){
                                                     <div>
                                                         <span class="me-4">{{ control.Scf_ref}}</span>
                                                         <span>{{ control.Scf_control }}</span>
-                                                        <p>BSI Standard 200-1 : 8.1</p>
+                                                        <p> {{concatStrings(control.Control_details)}}</p>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -413,7 +549,7 @@ mounted(){
                                     <tr v-for="(control, indexo) in checkedControls" :key="indexo">
                                         <td>{{ control.Scf_ref }}</td>
                                         <td>{{ control.Scf_control }}</td>
-                                        <td>{{ control.Scf_domain }}</td>
+                                        <td>{{concatStrings(control.Control_details)}}</td>
                                     </tr>
                                   
                                 </tbody>
@@ -428,15 +564,54 @@ mounted(){
                                 Back to Refine Controls
                             </a>
 
-                            <button data-bs-toggle="modal" data-bs-target="#confirmModal" class="btn btn-primary d-flex align-items-center ms-sm-3 mt-2 mt-sm-0">
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary d-flex align-items-center ms-sm-3 mt-2 mt-sm-0">
                                 Confirm Scope
                                 <svg class="arrow-right ms-1" xmlns="http://www.w3.org/2000/svg" width="10" height="12" fill="none">
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.5 11 4.293-4.293c.333-.333.5-.5.5-.707 0-.207-.167-.374-.5-.707L1.5 1" />
                                 </svg>
                             </button>
+                    
+                        </section>
+
+                        <section class="d-flex flex-wrap flex-sm-nowrap align-items-center" v-if="show_redirect">
+                           
+                            <!-- <a  @click="back_to_refine_controls()" class="btn btn-outline-primary bg-white ms-sm-auto mt-2 mt-sm-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none">
+                                    <path stroke="#3060F1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.5 1 2.207 5.293c-.333.333-.5.5-.5.707 0 .207.167.374.5.707L6.5 11" />
+                                </svg>
+                                Back to Refine Controls
+                            </a> -->
+
+                            <button @click="go_to_library()" class="btn btn-primary d-flex align-items-center ms-sm-3 mt-2 mt-sm-0">
+                                Go to your control Library
+                                <svg class="arrow-right ms-1" xmlns="http://www.w3.org/2000/svg" width="10" height="12" fill="none">
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.5 11 4.293-4.293c.333-.333.5-.5.5-.707 0-.207-.167-.374-.5-.707L1.5 1" />
+                                </svg>
+                            </button>
+                    
                         </section>
 
 
+                        <!-- Modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Scope</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to confirm Control Scope ?
+                                    You can redefine later at any point in the future.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" data-bs-dismiss="modal" class="btn btn-primary" @click="confirm_scope()">Save changes</button> 
+                                </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Octopus | Control Details main 2</title>
+
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="d-flex w-100">
+            <aside id="sidebar" class="sidebar collapse d-lg-block">
+                <div class="main-logo">
+                    <a href="index.html"> <img src="images/main-logo.png" alt="Octopus logo"></a>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none">
+                                        <path fill="#fff" d="M13.386 5.725 7.761.418A1.125 1.125 0 0 0 6.24.41l-.007.008L.614 5.725a1.125 1.125 0 0 0-.364.829v6.5a1.125 1.125 0 0 0 1.125 1.125H4.75a1.125 1.125 0 0 0 1.125-1.125V9.679h2.25v3.375a1.125 1.125 0 0 0 1.125 1.125h3.375a1.125 1.125 0 0 0 1.125-1.125v-6.5a1.127 1.127 0 0 0-.364-.829Zm-.761 7.329H9.25V9.679a1.125 1.125 0 0 0-1.125-1.125h-2.25A1.125 1.125 0 0 0 4.75 9.679v3.375H1.375v-6.5l.008-.007L7 1.24l5.618 5.304.008.007-.001 6.502Z" />
+                                    </svg>
+                                </div>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="select-frameworks.html">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M4.5 7.812v-4.57a.563.563 0 0 0-1.124 0v4.57a2.25 2.25 0 0 0 0 4.36v3.444a.563.563 0 0 0 1.125 0v-3.445a2.25 2.25 0 0 0 0-4.36Zm-.562 3.304a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm5.625-6.68V3.242a.563.563 0 0 0-1.125 0v1.196a2.25 2.25 0 0 0 0 4.36v6.82a.563.563 0 0 0 1.125 0v-6.82a2.25 2.25 0 0 0 0-4.36Zm-.562 3.305a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm7.312 4.5a2.255 2.255 0 0 0-1.687-2.18v-6.82a.563.563 0 0 0-1.125 0v6.82a2.25 2.25 0 0 0 0 4.36v1.196a.563.563 0 0 0 1.125 0V14.42a2.255 2.255 0 0 0 1.687-2.18Zm-2.25 1.126a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Z" />
+                                    </svg>
+                                </div>
+                                Control Scope
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a class="d-flex align-items-center" href="control-details-main.html">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path fill="#fff" d="M15.75 9a.562.562 0 0 1-.562.563H9a.563.563 0 0 1 0-1.125h6.188A.563.563 0 0 1 15.75 9ZM9 5.063h6.188a.563.563 0 0 0 0-1.125H9a.562.562 0 1 0 0 1.125Zm6.188 7.875H9a.562.562 0 0 0 0 1.124h6.188a.563.563 0 0 0 0-1.124ZM5.79 2.976 3.938 4.83l-.727-.728a.563.563 0 1 0-.796.796L3.54 6.023a.562.562 0 0 0 .796 0l2.25-2.25a.563.563 0 1 0-.796-.796Zm0 4.5L3.938 9.33l-.727-.728a.563.563 0 1 0-.796.796l1.125 1.125a.562.562 0 0 0 .796 0l2.25-2.25a.563.563 0 1 0-.796-.796Zm0 4.5L3.938 13.83l-.727-.728a.564.564 0 0 0-.796.796l1.125 1.125a.562.562 0 0 0 .796 0l2.25-2.25a.563.563 0 0 0-.796-.796Z" />
+                                    </svg>
+                                </div>
+                                Control
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="m15.023 6.218-3.938-3.937a.564.564 0 0 0-.398-.165h-6.75a1.125 1.125 0 0 0-1.124 1.125v12.376a1.125 1.125 0 0 0 1.124 1.124h10.126a1.125 1.125 0 0 0 1.124-1.124v-9a.56.56 0 0 0-.164-.399ZM11.25 4.037l2.017 2.017H11.25V4.037Zm2.813 11.58H3.937V3.24h6.188v3.375a.562.562 0 0 0 .563.563h3.374v8.438Zm-2.25-5.626a.563.563 0 0 1-.563.563h-4.5a.563.563 0 0 1 0-1.125h4.5a.562.562 0 0 1 .563.562Zm0 2.25a.563.563 0 0 1-.563.563h-4.5a.563.563 0 0 1 0-1.125h4.5a.562.562 0 0 1 .563.563Z" />
+                                    </svg>
+                                </div>
+                                Assessments
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M16.313 12.242h-.563v-6.75a1.687 1.687 0 0 0-1.688-1.688H3.938A1.687 1.687 0 0 0 2.25 5.491v6.75h-.563a.562.562 0 0 0-.562.563v1.125a1.688 1.688 0 0 0 1.688 1.688h12.374a1.687 1.687 0 0 0 1.688-1.688v-1.125a.563.563 0 0 0-.563-.563ZM3.374 5.492a.562.562 0 0 1 .563-.563h10.124a.562.562 0 0 1 .563.562v6.75H3.375v-6.75Zm12.375 8.437a.563.563 0 0 1-.563.563H2.813a.563.563 0 0 1-.563-.563v-.563h13.5v.563Zm-5.063-7.313a.562.562 0 0 1-.562.563h-2.25a.563.563 0 0 1 0-1.125h2.25a.562.562 0 0 1 .563.562Z" />
+                                    </svg>
+                                </div>
+                                Asset Inventory
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M11.813 11.117a.562.562 0 0 1-.563.562h-4.5a.563.563 0 0 1 0-1.125h4.5a.562.562 0 0 1 .563.563Zm-.563-2.813h-4.5a.563.563 0 1 0 0 1.125h4.5a.562.562 0 1 0 0-1.125Zm3.938-4.5v11.813a1.125 1.125 0 0 1-1.126 1.124H3.938a1.125 1.125 0 0 1-1.126-1.124V3.803a1.125 1.125 0 0 1 1.126-1.125h2.549a3.37 3.37 0 0 1 5.026 0h2.55a1.125 1.125 0 0 1 1.124 1.125ZM6.75 4.929h4.5a2.25 2.25 0 0 0-4.5 0Zm7.313-1.125h-1.881c.128.361.193.742.193 1.125v.562a.562.562 0 0 1-.563.563H6.189a.563.563 0 0 1-.563-.563V4.93c0-.383.065-.764.193-1.125h-1.88v11.813h10.124V3.803Z" />
+                                    </svg>
+                                </div>
+                                Evidence Manager
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M16.313 15.054a.563.563 0 0 1-.563.563H2.25a.563.563 0 0 1-.563-.563V3.804a.562.562 0 1 1 1.125 0v7.642l3.54-3.54a.563.563 0 0 1 .796 0L9 9.759l3.705-3.705H11.25a.562.562 0 1 1 0-1.125h2.813a.562.562 0 0 1 .562.562v2.813a.562.562 0 0 1-1.125 0V6.849l-4.102 4.103a.562.562 0 0 1-.796 0L6.75 9.099l-3.938 3.938v1.454H15.75a.562.562 0 0 1 .563.563Z" />
+                                    </svg>
+                                </div>
+                                Indicators
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M15.023 5.093 12.21 2.281a.564.564 0 0 0-.398-.165H6.189a1.125 1.125 0 0 0-1.125 1.125v1.125H3.938a1.125 1.125 0 0 0-1.126 1.125v10.126a1.125 1.125 0 0 0 1.126 1.124h7.874a1.125 1.125 0 0 0 1.126-1.124V14.49h1.124a1.125 1.125 0 0 0 1.126-1.124V5.49a.56.56 0 0 0-.165-.398Zm-3.21 10.523H3.936V5.491H9.33l2.482 2.483V15.617Zm2.25-2.25h-1.126V7.742a.56.56 0 0 0-.164-.398L9.96 4.531a.562.562 0 0 0-.398-.165H6.188V3.241h5.392l2.482 2.483v7.643Zm-3.938-2.25a.563.563 0 0 1-.563.563H6.188a.563.563 0 0 1 0-1.125h3.375a.562.562 0 0 1 .562.563Zm0 2.25a.563.563 0 0 1-.563.563H6.188a.563.563 0 0 1 0-1.125h3.375a.562.562 0 0 1 .562.563Z" />
+                                    </svg>
+                                </div>
+                                Documents
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M7.031 8.615a.563.563 0 0 0 .282-.487V3.066a.563.563 0 0 0-.75-.528 7.317 7.317 0 0 0-4.754 8.227.563.563 0 0 0 .835.385L7.03 8.615Zm-.843-4.697v3.885L2.82 9.746c-.008-.106-.008-.213-.008-.317a6.196 6.196 0 0 1 3.375-5.511Zm9.164 1.891-.02-.038-.022-.035A7.316 7.316 0 0 0 9 2.116a.562.562 0 0 0-.562.563v6.457l-5.542 3.227a.562.562 0 0 0-.202.774 7.312 7.312 0 0 0 13.619-3.708 7.266 7.266 0 0 0-.96-3.62Zm-5.79-2.542a6.191 6.191 0 0 1 4.493 2.597L9.563 8.48V3.267ZM9 15.617a6.221 6.221 0 0 1-5.027-2.58L9.275 9.95l.015-.01 5.328-3.103A6.188 6.188 0 0 1 9 15.617Z" />
+                                    </svg>
+                                </div>
+                                Reporting Center
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M17.227 8.208a1.125 1.125 0 0 0-.915-.467h-1.125V6.616a1.125 1.125 0 0 0-1.124-1.125H9.188L7.238 4.03a1.135 1.135 0 0 0-.675-.225h-3.75a1.125 1.125 0 0 0-1.126 1.125v10.125a.563.563 0 0 0 .563.563h12.593a.563.563 0 0 0 .534-.385l2.003-6.01a1.127 1.127 0 0 0-.153-1.014ZM6.563 4.93l1.95 1.462c.195.146.431.225.675.225h4.874v1.125H4.906a1.125 1.125 0 0 0-1.068.77l-1.026 3.077V4.929h3.751Zm7.875 9.563H3.03l1.876-5.626h11.407l-1.875 5.626Z" />
+                                    </svg>
+                                </div>
+                                Knowledge Base
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M9.844 13.085a.844.844 0 1 1-1.688 0 .844.844 0 0 1 1.688 0ZM9 5.491c-1.551 0-2.813 1.136-2.813 2.532v.281a.562.562 0 0 0 1.125 0v-.281c0-.774.758-1.407 1.688-1.407.93 0 1.688.633 1.688 1.407 0 .773-.758 1.406-1.688 1.406a.562.562 0 0 0-.563.562v.563a.563.563 0 0 0 1.126 0v-.05c1.282-.236 2.25-1.26 2.25-2.481C11.813 6.627 10.55 5.49 9 5.49Zm7.313 3.938A7.313 7.313 0 1 1 9 2.116a7.32 7.32 0 0 1 7.313 7.313Zm-1.125 0A6.187 6.187 0 1 0 9 15.617a6.195 6.195 0 0 0 6.188-6.188Z" />
+                                    </svg>
+                                </div>
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M15.75 3.804H2.25a1.125 1.125 0 0 0-1.125 1.125v9a1.125 1.125 0 0 0 1.125 1.125h13.5a1.125 1.125 0 0 0 1.125-1.125v-9a1.125 1.125 0 0 0-1.125-1.125Zm0 1.125v1.687H2.25V4.93h13.5Zm0 9H2.25V7.741h13.5v6.188Zm-1.125-1.688a.563.563 0 0 1-.563.563h-2.25a.562.562 0 1 1 0-1.125h2.25a.562.562 0 0 1 .563.563Zm-4.5 0a.563.563 0 0 1-.563.563H8.438a.563.563 0 0 1 0-1.125h1.124a.562.562 0 0 1 .563.563Z" />
+                                    </svg>
+                                </div>
+                                Subscription
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path fill="#fff" d="M15.487 11.147a.563.563 0 0 0-.542-.032 1.406 1.406 0 1 1 0-2.542.563.563 0 0 0 .804-.509V5.063a1.125 1.125 0 0 0-1.125-1.125h-2.547a2.54 2.54 0 0 0-.783-2.126 2.531 2.531 0 0 0-4.248 2.126H4.5a1.125 1.125 0 0 0-1.125 1.125v2.265A2.54 2.54 0 0 0 .708 8.989a2.537 2.537 0 0 0 2.666 3.373v2.263A1.125 1.125 0 0 0 4.5 15.75h10.125a1.125 1.125 0 0 0 1.125-1.125v-3.002a.563.563 0 0 0-.262-.476Zm-.863 3.478H4.5v-3.002a.563.563 0 0 0-.804-.508 1.406 1.406 0 1 1 0-2.542.563.563 0 0 0 .804-.509V5.063h3.283a.563.563 0 0 0 .508-.804 1.406 1.406 0 1 1 2.543 0 .563.563 0 0 0 .508.804h3.283v2.266a2.531 2.531 0 1 0 0 5.03v2.266Z" />
+                                    </svg>
+                                </div>
+                                Integrations
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none" viewBox="0 0 18 19">
+                                        <path fill="#fff" d="M16.875 15.054H15.75V7.179a1.125 1.125 0 0 0-1.125-1.125h-4.5V2.679a1.126 1.126 0 0 0-1.75-.937l-5.624 3.75a1.125 1.125 0 0 0-.501.937v8.625H1.125a.562.562 0 1 0 0 1.125h15.75a.562.562 0 1 0 0-1.125Zm-2.25-7.875v7.875h-4.5V7.179h4.5Zm-11.25-.75L9 2.68v12.375H3.375V6.429Zm4.5 1.875v1.125a.562.562 0 1 1-1.125 0V8.304a.562.562 0 1 1 1.125 0Zm-2.25 0v1.125a.562.562 0 1 1-1.125 0V8.304a.562.562 0 1 1 1.125 0Zm0 3.938v1.124a.563.563 0 0 1-1.125 0v-1.124a.563.563 0 1 1 1.125 0Zm2.25 0v1.124a.563.563 0 0 1-1.125 0v-1.124a.563.563 0 1 1 1.125 0Z" />
+                                    </svg>
+                                </div>
+                                Organization
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="nav-icon d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none">
+                                        <path fill="#fff" d="M8.998 6.054a3.375 3.375 0 1 0 0 6.75 3.375 3.375 0 0 0 0-6.75Zm0 5.625a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Zm6.188-2.098a5.493 5.493 0 0 0 0-.304l1.049-1.31a.563.563 0 0 0 .104-.497 7.538 7.538 0 0 0-.765-1.846.562.562 0 0 0-.422-.276l-1.668-.186a5.505 5.505 0 0 0-.21-.21l-.198-1.673a.562.562 0 0 0-.277-.421 7.573 7.573 0 0 0-1.845-.765.563.563 0 0 0-.497.105L9.15 3.241h-.304l-1.31-1.046a.562.562 0 0 0-.497-.105 7.566 7.566 0 0 0-1.845.765.562.562 0 0 0-.277.422l-.185 1.67c-.073.07-.144.141-.211.212l-1.672.192a.562.562 0 0 0-.422.277 7.574 7.574 0 0 0-.764 1.846.562.562 0 0 0 .104.496l1.044 1.307v.304l-1.047 1.31a.562.562 0 0 0-.104.497 7.54 7.54 0 0 0 .765 1.846.563.563 0 0 0 .422.276l1.667.185c.07.074.14.144.211.211l.195 1.672a.562.562 0 0 0 .277.422c.579.335 1.2.593 1.846.765a.563.563 0 0 0 .496-.105l1.307-1.043c.102.002.203.002.304 0l1.31 1.049a.563.563 0 0 0 .497.104 7.541 7.541 0 0 0 1.846-.765.563.563 0 0 0 .276-.422l.186-1.668c.073-.07.143-.14.21-.211l1.673-.197a.562.562 0 0 0 .422-.277 7.57 7.57 0 0 0 .764-1.846.563.563 0 0 0-.105-.496L15.186 9.58Zm-1.132-.457c.012.203.012.407 0 .61a.562.562 0 0 0 .122.385l.998 1.247a6.43 6.43 0 0 1-.438 1.055l-1.59.18a.563.563 0 0 0-.358.185c-.135.153-.28.297-.432.432a.563.563 0 0 0-.185.359l-.177 1.587c-.338.177-.69.324-1.054.438l-1.248-.997a.562.562 0 0 0-.351-.123h-.034a5.178 5.178 0 0 1-.61 0 .562.562 0 0 0-.386.122l-1.25.998a6.438 6.438 0 0 1-1.055-.438l-.18-1.587a.562.562 0 0 0-.185-.358 5.208 5.208 0 0 1-.432-.432.562.562 0 0 0-.359-.186l-1.587-.177a6.422 6.422 0 0 1-.438-1.054l.997-1.248a.562.562 0 0 0 .123-.385 5.2 5.2 0 0 1 0-.61.562.562 0 0 0-.123-.386l-.997-1.25c.114-.363.26-.716.438-1.054l1.587-.18a.563.563 0 0 0 .358-.185c.136-.153.28-.297.432-.432a.562.562 0 0 0 .186-.36l.177-1.586a6.42 6.42 0 0 1 1.055-.438l1.247.997c.109.087.246.131.385.123.203-.012.407-.012.61 0a.563.563 0 0 0 .386-.123l1.25-.997c.363.114.716.26 1.054.438l.18 1.587a.563.563 0 0 0 .186.358c.152.135.296.28.431.432.093.104.22.17.359.185l1.588.177c.177.338.323.69.438 1.055l-.998 1.247a.562.562 0 0 0-.122.389h.002Z" />
+                                    </svg>
+                                </div>
+                                Setting
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="main d-flex flex-column">
+                <header class="header d-flex flex-nowrap bg-white navbar navbar-explan">
+                    <button class="btn d-lg-none sidebar-toggle" id="sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-flex ms-auto action-btns">
+                        <button class="btn btn-outline-secondary btn-notification rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="icon-box">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none">
+                                    <path stroke="#74767C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 12.02c3.877 0 5.67-.497 5.844-2.493 0-1.995-1.25-1.867-1.25-4.315C11.593 3.3 9.78 1.125 7 1.125c-2.781 0-4.593 2.175-4.593 4.087 0 2.448-1.25 2.32-1.25 4.315C1.33 11.53 3.123 12.02 7 12.02Z" clip-rule="evenodd" />
+                                    <path stroke="#74767C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.642 14.09c-.937 1.04-2.4 1.053-3.347 0" />
+                                </svg>
+                            </div>
+                        </button>
+                        <a href="#" class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center">
+                            <div class="icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none">
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4.583v12.834M4.583 11h12.834" />
+                                </svg>
+                            </div>
+                        </a>
+                        <button class="btn btn-primary border-0 p-0  rounded-circle">
+                            <img src="images/profile-image.png" alt="prifile-image">
+                        </button>
+                    </div>
+                </header>
+                <div class="content-container">
+                    <div class="content" data-bs-spy="scroll" data-bs-target="navbar-control-details" data-bs-smooth-scroll="true" tabindex="0">
+                        <section class="card step-wizard">
+                            <ul class="step-wizard-list d-flex align-items-center">
+                                <li class="step-wizard-item">
+                                    <span class="progress-count">1</span>
+                                    <span class="progress-label">Test Assigned</span>
+                                </li>
+                                <li class="step-wizard-item current-item">
+                                    <span class="progress-count">2</span>
+                                    <span class="progress-label">Test In Progress</span>
+                                </li>
+                                <li class="step-wizard-item">
+                                    <span class="progress-count">3</span>
+                                    <span class="progress-label">Under Review</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="control-details-card card">
+                            <div class="container px-0" style="max-width: 842px;">
+                                <div class="d-sm-flex align-items-start pt-3">
+                                    <div>
+                                        <h2>GOV-02 : Publishing Security & Privacy Documentation </h2>
+                                        <h6 class="heading-text pt-spacing-5">This form documents the design and intent of a control as it should apply to your organization, the control can then be distributed out to the wider business, monitoring their progress in implementing the control within thei day - to day operations.</h6>
+                                    </div>
+                                    <button class="btn btn-secondary mt-4 mt-sm-0 py-spacing-2_5 px-3">Retire</button>
+                                </div>
+                                <div class="d-sm-flex align-items-center pt-3 pt-spacing-md-9_5">
+                                    <button type="button" class="btn btn-outline-secondary details-main--icon-btn d-flex align-items-center">
+                                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                            <path fill="#F2C544" d="M12 2.25A9.75 9.75 0 1 0 21.75 12 9.76 9.76 0 0 0 12 2.25Zm0 18A8.25 8.25 0 1 1 20.25 12 8.26 8.26 0 0 1 12 20.25Zm1.5-3.75a.75.75 0 0 1-.75.75 1.5 1.5 0 0 1-1.5-1.5V12a.75.75 0 1 1 0-1.5 1.5 1.5 0 0 1 1.5 1.5v3.75a.75.75 0 0 1 .75.75Zm-3-8.625a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" />
+                                        </svg>
+                                        Changes Made
+                                    </button>
+
+                                    <div class="pt-4 pt-sm-0 px-sm-4 pl-spacing-md-9_5">
+                                        <h5>Changes have been made to this control</h5>
+                                        <p class="heading-text pt-2 body-text">Press “Notify” update the operational Controls</p>
+                                    </div>
+
+                                    <button class="btn btn-secondary mt-4 mt-sm-0 py-spacing-2_5 px-3 d-flex align-items-center icon-with-stroke ms-md-auto">
+                                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                            <path stroke="#525E75" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 5.333a4 4 0 1 0-8 0c0 4.667-2 6-2 6h12s-2-1.333-2-6ZM9.152 14a1.333 1.333 0 0 1-2.306 0" />
+                                        </svg>
+                                        Notify
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="navbar-control-details" class="controls-navbar mt-spacing-md-10 pt-3 pt-md-0">
+                            <ul class="nav nav-pills border-bottom" role="tablist">
+                                <li class="nav-item">
+                                    <a href="#details" class="nav-link active" type="button">Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#testing" class="nav-link" type="button">Testing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#operational-controls" class="nav-link" type="button">Operational Controls</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#internal-assesment-results" class="nav-link" type="button">Internal Assesment Results</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#linked-policies" class="nav-link" type="button">Linked Policies</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <div class="details-view scrollable-contents pt-spacing-7_5">
+                            <section class="details-card card p-0" id="details">
+                                <div class="card-header px-md-4">
+                                    <h5>Details</h5>
+                                </div>
+                                <div class="card-body px-md-4 py-spacing-7">
+                                    <div class="pb-4 pt-md-3 border-bottom table-info">
+                                        <div class="details-container">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <div class="control-status">
+                                                        <h6>Control Status</h6>
+                                                        <span class="d-flex align-items-center status available p-0">
+                                                            Available
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="control-status">
+                                                        <h6>Instantiation Status</h6>
+                                                        <span class="d-flex align-items-center status operational p-0">
+                                                            Operational
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="py-4 border-bottom">
+                                        <div class="details-container">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <div class="control-status">
+                                                        <h6>Key Control</h6>
+                                                        <div class="radio-box-wrap d-flex align-items-center">
+                                                            <input class="form-check-input tab-check-box" checked readonly type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                            <div class="radio-box d-flex align-items-center justify-content-center rounded-circle"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="py-4 border-bottom">
+                                        <div class="details-container">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <label for="id">ID</label>
+                                                        <input id="id" value="GOV-02" readonly type="text" class="form-control card">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <label for="name">Name</label>
+                                                        <input id="name" value="Publishing Security & Privacy Documentation" readonly type="text" class="form-control card">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <label for="assesor">Assesor</label>
+                                                        <input id="assesor" value="Chris Freeman" readonly type="text" class="form-control card">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <label for="owner">Owner</label>
+                                                        <input id="owner" value="Chris Freeman" readonly type="text" class="form-control card">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="py-4 border-bottom table-info">
+                                        <div class="details-container">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <div class="control-status">
+                                                        <h6>Design Test Status</h6>
+                                                        <span class="d-flex align-items-center status pass p-0">
+                                                            Pass
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="control-status">
+                                                        <h6>Instantiation Test Status</h6>
+                                                        <span class="d-flex align-items-center status awaiting p-0">
+                                                            Awaiting Result
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="py-4 border-bottom">
+                                        <div class="details-container">
+                                            <div class="row g-4">
+                                                <div class="col-12">
+                                                    <div class="form-group-item">
+                                                        <label for="controlQuestions">Control Questions</label>
+                                                        <div id="controlQuestions" class="form-control card textarea readonly">Does the organization retain event logs for a time period consistent with records retention requirements to provide support for after-the-fact investigations of security incidents and to meet statutory, regulatory and contractual retention requirements?
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <label for="weighting">Weighting</label>
+                                                        <input id="id" value="10" readonly type="text" class="form-control card">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card p-0 my-4 my-spacing-md-10 overflow-hidden">
+                                            <div class="d-sm-flex align-items-center py-3 px-3 px-md-4">
+                                                <form class="search-bar card p-2 px-3 flex-row flex-nowrap align-items-center">
+                                                    <button type="submit" class="btn p-0 btn-search">
+                                                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                                            <path stroke="#8B94A5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8.25 14.25a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM15.75 15.75l-3.262-3.262" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="form-control border-0" id="search" placeholder="Search">
+                                                </form>
+                                                <a href="#" class="btn mt-3 mt-sm-0 ms-sm-auto btn-white">View All</a>
+                                            </div>
+                                            <div class="scrollable-area">
+                                                <table class="table table-hover scrollable">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th scope="col">regulation</th>
+                                                            <th scope="col">CIATIONS</th>
+                                                            <th scope="col">DOMAINAS</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="height: 155px;">
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ISO 27001</td>
+                                                            <td>ISO 27001.5.2 ISO 27001:7.5... </td>
+                                                            <td>
+                                                                Security Governance
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="details-container pb-md-4">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <div class="tab-actions">
+                                                        <div class="form-group-item">
+                                                            <label>Additional Regulations</label>
+                                                            <button class="btn btn-outline-secondary w-100 d-flex align-items-center  justify-content-between">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                                    <path d="M10 1.875A8.125 8.125 0 1 0 18.125 10 8.133 8.133 0 0 0 10 1.875Zm0 15A6.875 6.875 0 1 1 16.875 10 6.883 6.883 0 0 1 10 16.875ZM13.75 10a.624.624 0 0 1-.625.625h-2.5v2.5a.624.624 0 1 1-1.25 0v-2.5h-2.5a.625.625 0 1 1 0-1.25h2.5v-2.5a.625.625 0 0 1 1.25 0v2.5h2.5a.625.625 0 0 1 .625.625Z" fill="#525E75" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="tab-actions">
+                                                        <div class="form-group-item">
+                                                            <label>Additional Domains</label>
+                                                            <button class="btn btn-outline-secondary w-100 d-flex align-items-center  justify-content-between">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                                    <path d="M10 1.875A8.125 8.125 0 1 0 18.125 10 8.133 8.133 0 0 0 10 1.875Zm0 15A6.875 6.875 0 1 1 16.875 10 6.883 6.883 0 0 1 10 16.875ZM13.75 10a.624.624 0 0 1-.625.625h-2.5v2.5a.624.624 0 1 1-1.25 0v-2.5h-2.5a.625.625 0 1 1 0-1.25h2.5v-2.5a.625.625 0 0 1 1.25 0v2.5h2.5a.625.625 0 0 1 .625.625Z" fill="#525E75" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-4 table-info">
+                                        <div class="details-container">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <h2 class="h2-lg">Control Maturity</h2>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="dropdown-select form-select border-0 p-0">
+                                                                <button type="button" class="btn btn-outline-secondary dropdown-toggle no-arrow px-spacing-3 py-spacing-3 w-100 d-flex align-items-center justify-content-between" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    Not Performed
+                                                                    <svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                                        <path d="M7.00024 8.86505L10.995 4.86976L10.995 4.86976C11.0449 4.81982 11.1042 4.78021 11.1695 4.75319C11.2347 4.72616 11.3046 4.71226 11.3752 4.71226C11.4459 4.71226 11.5158 4.72616 11.581 4.75319C11.6463 4.78021 11.7056 4.81982 11.7555 4.86976C11.8054 4.91969 11.845 4.97897 11.8721 5.04421C11.8991 5.10945 11.913 5.17938 11.913 5.25C11.913 5.32062 11.8991 5.39054 11.8721 5.45579C11.845 5.52103 11.8054 5.58031 11.7555 5.63024L7.38052 10.0052L7.38049 10.0052L7.30977 9.93453C7.26914 9.97521 7.22089 10.0075 7.16778 10.0295C7.11467 10.0515 7.05774 10.0628 7.00024 10.0628C6.94275 10.0628 6.88582 10.0515 6.83271 10.0295C6.7796 10.0075 6.73134 9.97521 6.69071 9.93453L7.00024 8.86505ZM7.00024 8.86505L3.00549 4.86976L3.00549 4.86976C2.90464 4.76891 2.76786 4.71226 2.62524 4.71226C2.48263 4.71226 2.34585 4.76891 2.245 4.86976C2.14415 4.9706 2.0875 5.10738 2.0875 5.25C2.0875 5.39262 2.14415 5.52939 2.245 5.63024L6.61996 10.0052L7.00024 8.86505Z" fill="#525E75" stroke="#525E75" stroke-width="0.2" />
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class="dropdown-menu w-100 p-0 rounded-2">
+                                                                    <li><a class="dropdown-item" href="#">Add Custom Controls</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Import Controls</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <button class="btn btn-sm border-0" type="button">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                                    <path fill="#74767C" d="M10 1.875A8.125 8.125 0 1 0 18.125 10 8.133 8.133 0 0 0 10 1.875Zm0 15A6.875 6.875 0 1 1 16.875 10 6.883 6.883 0 0 1 10 16.875Zm1.25-3.125a.624.624 0 0 1-.625.625 1.25 1.25 0 0 1-1.25-1.25V10a.625.625 0 0 1 0-1.25 1.25 1.25 0 0 1 1.25 1.25v3.125a.624.624 0 0 1 .625.625Zm-2.5-7.188a.938.938 0 1 1 1.875 0 .938.938 0 0 1-1.875 0Z" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group-item">
+                                                        <label for="weighting">Target Maturity</label>
+                                                        <input id="id" value="Well Defined (3)" readonly type="text" class="form-control card">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="control-status">
+                                                        <h6>Current Maturity</h6>
+                                                        <span class="d-flex align-items-center status not-started p-0">
+                                                            Planned & Tracked (2)
+                                                            <div class="position-relative">
+                                                                <button type="button" data-bs-toggle="tooltip" data-bs-dismiss="toast" data-bs-target="#maturityInfo" aria-label="Close" class="btn border-0 d-flex align-items-center justify-content-center btn-show-info position-absolute maturity-info-btn">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                                        <path d="M10 1.875A8.125 8.125 0 1 0 18.125 10 8.133 8.133 0 0 0 10 1.875Zm0 15A6.875 6.875 0 1 1 16.875 10 6.883 6.883 0 0 1 10 16.875Zm1.25-3.125a.624.624 0 0 1-.625.625 1.25 1.25 0 0 1-1.25-1.25V10a.625.625 0 0 1 0-1.25 1.25 1.25 0 0 1 1.25 1.25v3.125a.624.624 0 0 1 .625.625Zm-2.5-7.188a.938.938 0 1 1 1.875 0 .938.938 0 0 1-1.875 0Z" fill="#74767C" />
+                                                                    </svg>
+                                                                </button>
+                                                                <div class="popover-card info-toast card p-0" id="maturityInfo" role="alert" aria-live="assertive" aria-atomic="true">
+                                                                    <div class="py-3 px-spacing-5 card-header d-flex align-items-center justify-content-between">
+                                                                        <p> Description</p>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                                                            <path d="M19.28 18.22a.752.752 0 0 1-.53 1.28.75.75 0 0 1-.53-.22L12 13.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L10.94 12 4.72 5.78a.75.75 0 1 1 1.06-1.06L12 10.94l6.22-6.22a.75.75 0 1 1 1.06 1.06L13.06 12l6.22 6.22Z" fill="#74767C" />
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h6>Planned & Tracked</h6>
+                                                                        <p>-Cybersecurity policies and standards exist that are aligned with a leasing cybersecurity framework (e.g,, NIST 800-53, ISO 27002 or NIST Cybersecurity Framework).</p>
+                                                                        <p>- Documentation is made available to internal personnel.</p>
+                                                                        <p>- Procesures for important tasks are documented and assigned to individuals or teams.</p>
+                                                                    </div>
+                                                                    <div class="card-footer d-flex align-items-center justify-content-end">
+                                                                        <button type="submit" class="btn btn-primary tab-btn-primary">Close</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group-item label-yellow">
+                                                        <label for="notPerformed">Not Performed</label>
+                                                        <div id="notPerformed" class="form-control card textarea readonly">There is no evidence of a capability to establish, maintain and disseminate cybersecurity and privacy policies, standards and procedures.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group-item label-yellow">
+                                                        <label for="controlQuestions">Performed Informally</label>
+                                                        <div id="controlQuestions" class="form-control card textarea readonly">
+                                                            <p>Cybersecurity & Privacy Governance (GOV) efforts are standardized across the organization and centrally managed, where technically feasible, to ensure consistency. CMM Level 3 control maturity would reasonably expect all, or at least most, the following criteria to exist: </p>
+                                                            <ul>
+                                                                <li>A Governance, Risk & Compliance (GRC) function, or similar function, provides scoping guidance to determine control applicability. • Compliance requirements for cybersecurity and privacy controls are identified, documented and tested for adherence to internal standards or regulatory requirements.</li>
+                                                                <li>Procedures are established for sensitive/regulated obligations and standardized across the organization.</li>
+                                                                <li>Controls are standardized across the organization to ensure uniformity and consistent execution.</li>
+                                                                <li>Internal policies and standards address all statutory, regulatory and contractual obligations for cybersecurity and privacy.</li>
+                                                                <li>Defined roles & responsibilities require data/process owners to define, implement and maintain cybersecurity and privacy controls for each system, application and/ or service of which they have accountability.</li>
+                                                                <li>Executive leadership team (e.g., corporate-level officers, board of directors, etc.) take an active role in defining and enforcing Business As Usual (BAU) practices across the organization to operationalize cybersecurity and privacy principles.</li>
+                                                                <li>A GRC function, or similar function, tracks the efforts to determine if Business As Usual (BAU) reinforcement efforts impact metrics associated with cybersecurity and privacy controls.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group-item label-red">
+                                                        <label for="plannedTracked">Planned and Tracked</label>
+                                                        <div id="plannedTracked" class="form-control card textarea readonly">
+                                                            <p>Cybersecurity & Privacy Governance (GOV) efforts are standardized across the organization and centrally managed, where technically feasible, to ensure consistency. CMM Level 3 control maturity would reasonably expect all, or at least most, the following criteria to exist: </p>
+                                                            <ul>
+                                                                <li>A Governance, Risk & Compliance (GRC) function, or similar function, provides scoping guidance to determine control applicability. • Compliance requirements for cybersecurity and privacy controls are identified, documented and tested for adherence to internal standards or regulatory requirements.</li>
+                                                                <li>Procedures are established for sensitive/regulated obligations and standardized across the organization.</li>
+                                                                <li>Controls are standardized across the organization to ensure uniformity and consistent execution.</li>
+                                                                <li>Internal policies and standards address all statutory, regulatory and contractual obligations for cybersecurity and privacy.</li>
+                                                                <li>Defined roles & responsibilities require data/process owners to define, implement and maintain cybersecurity and privacy controls for each system, application and/ or service of which they have accountability.</li>
+                                                                <li>Executive leadership team (e.g., corporate-level officers, board of directors, etc.) take an active role in defining and enforcing Business As Usual (BAU) practices across the organization to operationalize cybersecurity and privacy principles.</li>
+                                                                <li>A GRC function, or similar function, tracks the efforts to determine if Business As Usual (BAU) reinforcement efforts impact metrics associated with cybersecurity and privacy controls.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group-item label-blue">
+                                                        <label for="wellDefinedTarget">Well Defined Target</label>
+                                                        <div id="wellDefinedTarget" class="form-control card textarea readonly">
+                                                            <p>Cybersecurity & Privacy Governance (GOV) efforts are standardized across the organization and centrally managed, where technically feasible, to ensure consistency. CMM Level 3 control maturity would reasonably expect all, or at least most, the following criteria to exist: </p>
+                                                            <ul>
+                                                                <li>A Governance, Risk & Compliance (GRC) function, or similar function, provides scoping guidance to determine control applicability. • Compliance requirements for cybersecurity and privacy controls are identified, documented and tested for adherence to internal standards or regulatory requirements.</li>
+                                                                <li>Procedures are established for sensitive/regulated obligations and standardized across the organization.</li>
+                                                                <li>Controls are standardized across the organization to ensure uniformity and consistent execution.</li>
+                                                                <li>Internal policies and standards address all statutory, regulatory and contractual obligations for cybersecurity and privacy.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group-item label-blue-secondary">
+                                                        <label for="quantitativelyControlled">Quantitatively Controlled</label>
+                                                        <div id="quantitativelyControlled" class="form-control card textarea readonly">
+                                                            <p>Cybersecurity & Privacy Governance (GOV) efforts are standardized across the organization and centrally managed, where technically feasible, to ensure consistency. CMM Level 3 control maturity would reasonably expect all, or at least most, the following criteria to exist: </p>
+                                                            <ul>
+                                                                <li>A Governance, Risk & Compliance (GRC) function, or similar function, provides scoping guidance to determine control applicability. • Compliance requirements for cybersecurity and privacy controls are identified, documented and tested for adherence to internal standards or regulatory requirements.</li>
+                                                                <li>Procedures are established for sensitive/regulated obligations and standardized across the organization.</li>
+                                                                <li>Controls are standardized across the organization to ensure uniformity and consistent execution.</li>
+                                                                <li>Internal policies and standards address all statutory, regulatory and contractual obligations for cybersecurity and privacy.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group-item label-green">
+                                                        <label for="continuouslyImproving">Continuously Improving</label>
+                                                        <div id="continuouslyImproving" class="form-control card textarea readonly">
+                                                            <p>See SP-CMM4. SP-CMM5 is N/A, since a continuously-improving process is not necessary to provide governance oversight reporting and recommendations to those entrusted to make executive decisions about matters considered material to the organization’s cybersecurity and privacy program.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="card p-0" id="testing">
+                                <div class="card-header px-md-4">
+                                    <h5>TESTING</h5>
+                                </div>
+                                <div class="card-body px-md-4 py-spacing-7">
+                                    <h2 class="h2-lg">Control Maturity</h2>
+                                    <div class="py-4 border-bottom">
+                                        <div class="details-container pb-md-3">
+                                            <div class="form-group-item">
+                                                <label for="continuouslyImproving">Design Test</label>
+                                                <div id="continuouslyImproving" class="form-control card textarea readonly">
+                                                    <p>Is the control designed appropriately to mitigate risk adequately?</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-item">
+                                                <label for="continuouslyImproving">Operating Test</label>
+                                                <div id="continuouslyImproving" class="form-control card textarea readonly">
+                                                    <p>Is the control effective in operation? DOes it mitigate risk to the designerd degree?</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-item">
+                                                <label for="continuouslyImproving">Self-assesment Guidance</label>
+                                                <div id="continuouslyImproving" class="form-control card textarea readonly">
+                                                    <p>As the cotrol owner, can you please review the control and it is implemented and operating correctly.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="h3-lg pt-4 pt-spacing-md-7_5">Tests</h3>
+                                    <div class="py-3 py-spacing-md-5">
+                                        <div class="card p-0 overflow-hidden">
+                                            <div class="d-sm-flex align-items-center py-3 px-3 px-md-4">
+                                                <form class="search-bar card py-spacing-2_5 px-3 flex-row flex-nowrap align-items-center">
+                                                    <button type="submit" class="btn p-0 btn-search">
+                                                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                                            <path stroke="#8B94A5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8.25 14.25a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM15.75 15.75l-3.262-3.262" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="form-control border-0" id="search" placeholder="Search">
+                                                </form>
+                                                <a href="#" class="btn px-spacing-3 py-spacing-2_5 mt-3 mt-sm-0 ms-sm-auto btn-white d-flex align-items-center">
+                                                    <svg class="me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                        <path fill="#525E75" d="M15.625 10a.624.624 0 0 1-.625.625H5a.625.625 0 1 1 0-1.25h10a.625.625 0 0 1 .625.625Zm2.5-4.375H1.875a.625.625 0 0 0 0 1.25h16.25a.625.625 0 1 0 0-1.25Zm-6.25 7.5h-3.75a.625.625 0 1 0 0 1.25h3.75a.624.624 0 1 0 0-1.25Z" />
+                                                    </svg>
+                                                    Filter
+                                                </a>
+                                            </div>
+                                            <div class="scrollable-area">
+                                                <table class="table table-hover scrollable">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th scope="col">TEST</th>
+                                                            <th scope="col">ASSESSOR</th>
+                                                            <th scope="col">STATUS</th>
+                                                            <th scope="col">DESIGN TEST</th>
+                                                            <th scope="col">OPERATING TEST</th>
+                                                            <th scope="col">SELF-ASSESSMENT</th>
+                                                            <th scope="col">MATURITY</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="height: 209px;">
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 003</td>
+                                                            <td>Courtney Henry</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker ready-to-submit p-0">
+                                                                    Ready o Submit
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>Awaiting result</td>
+                                                            <td>Well Defined (3)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker complete p-0">
+                                                                    Complete
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>Pass</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Robert Fox</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Implemented</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker complete p-0">
+                                                                    Complete
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>Pass</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Robert Fox</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Implemented</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker complete p-0">
+                                                                    Complete
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>Pass</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Robert Fox</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Implemented</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker complete p-0">
+                                                                    Complete
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>Pass</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Robert Fox</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Implemented</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker complete p-0">
+                                                                    Complete
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Control Test 004</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>Pass</td>
+                                                            <td>N/A</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Robert Fox</td>
+                                                            <td>Chris Smith</td>
+                                                            <td>
+                                                                <span class="d-flex align-items-center status rounded-marker not-started p-0">
+                                                                    Not Started
+                                                                </span>
+                                                            </td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                            <td>Implemented</td>
+                                                            <td>Planned & Tracked (2)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-row d-sm-flex align-items-center pt-3">
+                                        <a href="#" class="btn p-3 d-flex align-items-center btn-white blue-light-color">
+                                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                                <path d="M15.75 9a.563.563 0 0 1-.563.563H9.564v5.624a.562.562 0 1 1-1.126 0V9.564H2.814a.563.563 0 1 1 0-1.126h5.624V2.814a.563.563 0 1 1 1.126 0v5.624h5.624A.562.562 0 0 1 15.75 9Z" fill="#619FFC" />
+                                            </svg>
+                                            <span>Create Test</span>
+                                        </a>
+                                        <a href="#" class="btn mt-3 mt-sm-0 large p-3 btn-white bg-light">
+                                            Self-Assessment
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="card p-0" id="operational-controls">
+                                <div class="card-header px-md-4">
+                                    <h5>OPERATIONAL CONTROLS</h5>
+                                </div>
+                                <div class="card-body px-md-4 py-spacing-7">
+                                    <div class="py-3 py-spacing-md-5">
+                                        <div class="card p-0 overflow-hidden">
+                                            <div class="d-sm-flex align-items-center py-3 px-3 px-md-4">
+                                                <form class="search-bar card py-spacing-2_5 px-3 flex-row flex-nowrap align-items-center">
+                                                    <button type="submit" class="btn p-0 btn-search">
+                                                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                                            <path stroke="#8B94A5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8.25 14.25a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM15.75 15.75l-3.262-3.262" />
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="form-control border-0" id="search" placeholder="Search">
+                                                </form>
+                                                <a href="#" class="btn px-spacing-3 py-spacing-2_5 mt-3 mt-sm-0 ms-sm-auto btn-white d-flex align-items-center">
+                                                    <svg class="me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                        <path fill="#525E75" d="M6.875 8.125h-3.75A.625.625 0 0 1 2.5 7.5V3.75a.625.625 0 0 1 1.25 0v1.863C4.959 4.25 7.079 2.5 10 2.5c3.345 0 5.358 1.974 5.442 2.058a.625.625 0 0 1-.883.886C14.54 5.423 12.806 3.75 10 3.75c-2.734 0-4.705 1.926-5.669 3.125h2.544a.625.625 0 0 1 0 1.25Zm10 3.75h-3.75a.624.624 0 1 0 0 1.25h2.544c-.963 1.2-2.935 3.125-5.669 3.125-2.806 0-4.538-1.673-4.56-1.694a.625.625 0 1 0-.882.886C4.642 15.526 6.655 17.5 10 17.5c2.921 0 5.041-1.75 6.25-3.113v1.863a.624.624 0 1 0 1.25 0V12.5a.624.624 0 0 0-.625-.625Z" />
+                                                    </svg>
+                                                    Refresh Table
+                                                </a>
+                                            </div>
+                                            <div class="scrollable-area">
+                                                <table class="table table-hover scrollable">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th scope="col">LocaTION</th>
+                                                            <th scope="col">CONTEXT</th>
+                                                            <th scope="col">STATUS</th>
+                                                            <th scope="col">CONTROL OWNER</th>
+                                                            <th scope="col">CURRENT MATURITY</th>
+                                                            <th scope="col">LOCAL IMPLEMENTATION</th>
+                                                            <th scope="col">OVERALL STATUS</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="height: 210px;">
+                                                        <tr>
+                                                            <td>Finance</td>
+                                                            <td>Business Unit</td>
+                                                            <td>Chris Freeman</td>
+                                                            <td>Not Performed (0)</td>
+                                                            <td>N/A</td>
+                                                            <td>Awaiting result</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>HR</td>
+                                                            <td>Business Unit</td>
+                                                            <td>Chris Freeman</td>
+                                                            <td>Not Performed (0)</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>N/A</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Info Sec</td>
+                                                            <td>Business Unit</td>
+                                                            <td>Chris Freeman</td>
+                                                            <td>Not Performed (0)</td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Marketing</td>
+                                                            <td>Business Unit</td>
+                                                            <td>Chris Freeman</td>
+                                                            <td>Not Performed (0)</td>
+                                                            <td>N/A</td>
+                                                            <td>N/A</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="card p-0" id="internal-assesment-results">
+                                <div class="card-header px-md-4">
+                                    <h5>INTERNAL ASSESMENTS RESULTS</h5>
+                                </div>
+                                <div class="card-body px-md-4 py-spacing-7">
+                                    <div class="card p-0 overflow-hidden">
+                                        <div class="d-sm-flex align-items-center py-3 px-3 px-md-4">
+                                            <form class="search-bar card py-spacing-2_5 px-3 flex-row flex-nowrap align-items-center">
+                                                <button type="submit" class="btn p-0 btn-search">
+                                                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                                        <path stroke="#8B94A5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8.25 14.25a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM15.75 15.75l-3.262-3.262" />
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="form-control border-0" id="search" placeholder="Search">
+                                            </form>
+                                            <a href="#" class="btn px-spacing-3 py-spacing-2_5 mt-3 mt-sm-0 ms-sm-auto btn-white d-flex align-items-center">
+                                                <svg class="me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                    <path fill="#525E75" d="M6.875 8.125h-3.75A.625.625 0 0 1 2.5 7.5V3.75a.625.625 0 0 1 1.25 0v1.863C4.959 4.25 7.079 2.5 10 2.5c3.345 0 5.358 1.974 5.442 2.058a.625.625 0 0 1-.883.886C14.54 5.423 12.806 3.75 10 3.75c-2.734 0-4.705 1.926-5.669 3.125h2.544a.625.625 0 0 1 0 1.25Zm10 3.75h-3.75a.624.624 0 1 0 0 1.25h2.544c-.963 1.2-2.935 3.125-5.669 3.125-2.806 0-4.538-1.673-4.56-1.694a.625.625 0 1 0-.882.886C4.642 15.526 6.655 17.5 10 17.5c2.921 0 5.041-1.75 6.25-3.113v1.863a.624.624 0 1 0 1.25 0V12.5a.624.624 0 0 0-.625-.625Z" />
+                                                </svg>
+                                                Refresh Table
+                                            </a>
+                                        </div>
+                                        <div class="scrollable-area">
+                                            <table class="table table-hover scrollable">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th scope="col">target</th>
+                                                        <th scope="col">QUESTION TEXT</th>
+                                                        <th scope="col">QUESTION RESPONSE</th>
+                                                        <th scope="col">MATURITY</th>
+                                                        <th scope="col">RISK SCORE</th>
+                                                        <th scope="col">DATE FINALISED</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="height: 145px; text-align: center;">
+                                                    <tr>
+                                                        <td style="text-align: center; height: 144px;">
+                                                            <h4 class="body-text">No Data</h4>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="card p-0" id="linked-policies">
+                                <div class="card-header px-md-4">
+                                    <h5>LINKED POLICIES</h5>
+                                </div>
+                                <div class="card-body px-md-4 py-spacing-7">
+                                    <div class="card p-0 overflow-hidden">
+                                        <div class="d-sm-flex align-items-center py-3 px-3 px-md-4">
+                                            <form class="search-bar card py-spacing-2_5 px-3 flex-row flex-nowrap align-items-center">
+                                                <button type="submit" class="btn p-0 btn-search">
+                                                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                                        <path stroke="#8B94A5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8.25 14.25a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM15.75 15.75l-3.262-3.262" />
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="form-control border-0" id="search" placeholder="Search">
+                                            </form>
+                                            <a href="#" class="btn px-spacing-3 py-spacing-2_5 mt-3 mt-sm-0 ms-sm-auto btn-white d-flex align-items-center">
+                                                <svg class="me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                    <path fill="#525E75" d="M6.875 8.125h-3.75A.625.625 0 0 1 2.5 7.5V3.75a.625.625 0 0 1 1.25 0v1.863C4.959 4.25 7.079 2.5 10 2.5c3.345 0 5.358 1.974 5.442 2.058a.625.625 0 0 1-.883.886C14.54 5.423 12.806 3.75 10 3.75c-2.734 0-4.705 1.926-5.669 3.125h2.544a.625.625 0 0 1 0 1.25Zm10 3.75h-3.75a.624.624 0 1 0 0 1.25h2.544c-.963 1.2-2.935 3.125-5.669 3.125-2.806 0-4.538-1.673-4.56-1.694a.625.625 0 1 0-.882.886C4.642 15.526 6.655 17.5 10 17.5c2.921 0 5.041-1.75 6.25-3.113v1.863a.624.624 0 1 0 1.25 0V12.5a.624.624 0 0 0-.625-.625Z" />
+                                                </svg>
+                                                Refresh Table
+                                            </a>
+                                        </div>
+                                        <div class="scrollable-area">
+                                            <table class="table table-hover scrollable">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th scope="col">REF</th>
+                                                        <th scope="col">TITLE</th>
+                                                        <th scope="col">DESCRIPTION</th>
+                                                        <th scope="col">CURRENT VERSION</th>
+                                                        <th scope="col">LAST UPDATED</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="height: 162px;">
+                                                    <tr>
+                                                        <td>P003</td>
+                                                        <td>Business Continuity</td>
+                                                        <td>This documents details our busi...</td>
+                                                        <td>v0</td>
+                                                        <td>08 Oct 2023</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P003</td>
+                                                        <td>Business Continuity</td>
+                                                        <td>This documents details our busi...</td>
+                                                        <td>v0</td>
+                                                        <td>08 Oct 2023</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P003</td>
+                                                        <td>Business Continuity</td>
+                                                        <td>This documents details our busi...</td>
+                                                        <td>v0</td>
+                                                        <td>08 Oct 2023</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Javascript -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
