@@ -564,7 +564,7 @@ mounted(){
                                 Back to Refine Controls
                             </a>
 
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary d-flex align-items-center ms-sm-3 mt-2 mt-sm-0">
+                            <button data-bs-toggle="modal" data-bs-target="#confirmModal" class="btn btn-primary d-flex align-items-center ms-sm-3 mt-2 mt-sm-0">
                                 Confirm Scope
                                 <svg class="arrow-right ms-1" xmlns="http://www.w3.org/2000/svg" width="10" height="12" fill="none">
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.5 11 4.293-4.293c.333-.333.5-.5.5-.707 0-.207-.167-.374-.5-.707L1.5 1" />
@@ -593,25 +593,28 @@ mounted(){
 
 
                         <!-- Modal -->
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Scope</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure you want to confirm Control Scope ?
-                                    You can redefine later at any point in the future.
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" data-bs-dismiss="modal" class="btn btn-primary" @click="confirm_scope()">Save changes</button> 
-                                </div>
+                        <div class="modal fade" id="confirmModal" aria-labelledby="confirmModal" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="card confirm-scope-card">
+                                    <div class="d-flex align-items-start mb-2">
+                                        <h2 class="modal-title">Confirm Scope</h2>
+                                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body px-0">
+                                        <h6>Are you sure you want to confirm Control Scope?</h6>
+                                        <h6>You can redefine later at any point in the future.</h6>
+                                    </div>
+                                    <footer class="modal-btn-wrapper d-flex justify-content-end">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="confirm_scope()">Confirm Scope</button>
+                                    </footer>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                        <!-- Modal -->
+                     
                     </div>
                 </div>
             </main>
