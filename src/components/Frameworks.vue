@@ -444,7 +444,7 @@ mounted(){
                                     </figure>
                                     <div class="card-text">
                                         <h4>{{framework.name}}</h4>
-                                        <span>ddd</span>
+                                        <span></span>
                                     </div>
                                 </div>
                                 <div class="card-body px-0 d-flex flex-wrap flex-sm-nowrap">
