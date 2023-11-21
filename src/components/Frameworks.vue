@@ -36,6 +36,8 @@ data () {
       frameworkSearchKey : '',
       library_created: false,
       show_redirect : false,
+      load_spinner: false,
+      show_search_bar: true,
       current_step:['step-wizard-item current-item','step-wizard-item','step-wizard-item'],
       scope_to_submit:{req_owner:"Sed",controls:[],company_id:"SSNIT_GHANA"}
 
@@ -74,10 +76,11 @@ methods: {
   },
 
   get_domains_with_controls(){
-
-    // let stringed_array = JSON.stringify(this.selected_frameworks);
+   
+    
     this.show_framework = false;
-    this.show_domains = true;
+    this.load_spinner = true;
+
     this.current_step[0] = 'step-wizard-item';
     this.current_step[1] = 'step-wizard-item current-item';
     this.current_step[2] = 'step-wizard-item';
@@ -89,17 +92,8 @@ methods: {
      
     }
 
-   
-
     console.log(this.selected_frameworks);
     console.log(frames);
-      //theString.replace(/^\/|\/$/g, '');
-    // let final_array = stringed_array.replace("[", "(");
-    // final_array = final_array.replace("]", ")");
-    // this.requestdata = final_array.replaceAll('"', '\'');
-
-    // console.log(this.requestdata);
-    
    
     //frameworks
     var config = {
@@ -118,8 +112,13 @@ methods: {
           
           console.log(result); 
           this.domains=result.data;
+
           
           this.CheckAllControlsByDefault();
+          this.load_spinner = false;
+          this.show_search_bar = false;
+          this.show_domains = true;
+         
        
       }, error => {
          
@@ -129,12 +128,16 @@ methods: {
   },
 
   select_framework(){
+
   },
 
   back_to_frameworks(){
     this.show_domains = false;
     this.show_framework = true;
     this.show_controls = false;
+    this.show_search_bar = true;
+
+    this.get_frameworks();
     this.current_step[0] = 'step-wizard-item  current-item';
     this.current_step[1] = 'step-wizard-item';
     this.current_step[2] = 'step-wizard-item';
@@ -398,6 +401,7 @@ mounted(){
                 <Header></Header>  
                 <div class="content-container">
                     <div class="content">
+                      
                         <!-- <section class="card feature-card text-center">
                             <div class="card-body mx-auto p-0">
                                 <h2>Get started by scoping your controls from our library of 1000+ pre-mapped controls across 150+ frameworks or regulations.</h2>
@@ -416,8 +420,11 @@ mounted(){
                               Controls successfully added to your library!
                         </div>
 
-                        <section  v-if="show_framework" class="section-title d-sm-flex justify-content-between align-items-center">
+                        <section  v-if="show_search_bar" class="section-title d-sm-flex justify-content-between align-items-center">
                             <h2 class="fw-semibold mb-2 mb-sm-0">Choose Frameworks</h2>
+                            <div v-if="load_spinner" class="spinner-border" role="status">
+                                 <span class="sr-only"></span>
+                            </div>
                             <form class="search-bar card p-2 p-lg-3 flex-row flex-nowrap align-items-center">
                                 <button type="submit" class="btn p-0 btn-search">
                                     <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
@@ -427,8 +434,9 @@ mounted(){
                                 <input type="text" class="form-control border-0" id="search" placeholder="Search for Frameworks" @change="searchFramework()" v-model="frameworkSearchKey">
                             </form>
                         </section>
-
+                       
                         <section  v-if="show_framework" class="frameworks-widget d-grid gap-4">
+                           
                             <div class="card framework-widget-item" v-for="(framework, index) in frameworks" :key="framework.id">
                                 <div class="card-heading d-flex align-items-center">
                                     <figure class="rounded-circle">
